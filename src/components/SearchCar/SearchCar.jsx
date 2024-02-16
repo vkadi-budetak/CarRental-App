@@ -7,6 +7,7 @@ import {
   SearchbarStyled,
   SearchFormBtnStyled,
   SearchFormBtnLabelStyled,
+  SearchbarDescStyled,
 } from './SearchCar.Styled';
 
 import { filterCars } from '../../data/cars';
@@ -16,7 +17,7 @@ export default function SearchCar() {
   return (
     <SearchbarStyled>
         <div>
-          <p>Car brand</p>
+          <SearchbarDescStyled>Car brand</SearchbarDescStyled>
           <Autocomplete
             disablePortal
             ListboxProps={{ style: { maxHeight: '350px' } }}
@@ -29,7 +30,7 @@ export default function SearchCar() {
           />
         </div>
         <div>
-          <p>Price/ 1 hour</p>
+          <SearchbarDescStyled>Price/ 1 hour</SearchbarDescStyled>
           <Autocomplete
             disablePortal
             ListboxProps={{ style: { maxHeight: '100px' } }}
@@ -40,7 +41,7 @@ export default function SearchCar() {
           />
         </div>
         <div>
-          <p>Сar mileage / km</p>
+          <SearchbarDescStyled>Сar mileage / km</SearchbarDescStyled>
           <TextField
             // label="With normal TextField"
             id="outlined-start-adornment"

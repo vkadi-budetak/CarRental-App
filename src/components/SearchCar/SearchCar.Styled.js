@@ -1,36 +1,34 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SearchbarStyled = styled.div`
-display: flex;
-flex-wrap: wrap;
-gap: 18px;
+margin-left: 162px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+`;
 
+export const SearchbarDescStyled = styled.p`
+font-size: 14px;
+color: rgb(138, 138, 137);
 `
 
 export const SearchFormStyled = styled.input`
-background-color: tomato;
-    &:hover{
-
-    }
-  `
-
-
+  background-color: tomato;
+  &:hover {
+  }
+`;
 
 export const SearchFormBtnStyled = styled.button`
-align-self: flex-end;
-background-color: rgb(52, 112, 255);
-width: 136px;
-height: 48px;
-border-radius: 12px;
-`
+  align-self: flex-end;
+  background-color: rgb(52, 112, 255);
+  width: 136px;
+  height: 57px;
+  border-radius: 12px;
+`;
 
 export const SearchFormBtnLabelStyled = styled.span`
- width: auto;
- height: 20px;
- color: rgb(255, 255, 255);
-`
+  width: auto;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+`;
 
-
-
-  
-  

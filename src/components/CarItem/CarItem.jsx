@@ -1,25 +1,41 @@
 import React from 'react';
 
+import {
+  CarItemStyled,
+  ImgCarStyled,
+  TitleStyled,
+  TitleBrandkStyled,
+  TitlePriceStyled,
+  TitleDetailStyled,
+  DescStyled,
+  CarItemBtnStyled,
+} from './CarItem.Styled';
+
 export default function CarItem() {
   return (
-    <div>
-      <img src="" alt="photoCar" />
-      <h3>
-        Volvo <span>XC90</span> <span>2019</span>
-      </h3>
-      <span>$50</span>
-      <div>
-        <span>Kiev</span>
-        <span>Ukraine</span>
-        <span>Auto Rentals</span>
-        <span>Premium</span>
-      </div>
-      <div>
-        <span>Suv</span>
-        <span>Volvo</span>
-        <span>9584</span>
-        <span>Premium Sound System</span>
-      </div>
-    </div>
+    <CarItemStyled>
+      <ImgCarStyled src="" alt="photoCar" />
+
+      <TitleStyled>
+        Volvo <TitleBrandkStyled>XC90</TitleBrandkStyled>, 2019
+        <TitlePriceStyled>$50</TitlePriceStyled>
+      </TitleStyled>
+      <TitleDetailStyled>
+        <DescStyled>Kiev</DescStyled>
+        <DescStyled>Ukraine</DescStyled>
+        <DescStyled>Auto Rentals</DescStyled>
+        <DescStyled>Premium</DescStyled>
+      </TitleDetailStyled>
+      <TitleDetailStyled>
+        <DescStyled>Suv</DescStyled>
+        <DescStyled>Volvo</DescStyled>
+        <DescStyled>9584</DescStyled>
+        <DescStyled>Premium Sound System</DescStyled>
+      </TitleDetailStyled>
+
+      <svg width="18" height="18"></svg>
+
+      <CarItemBtnStyled>Learn more</CarItemBtnStyled>
+    </CarItemStyled>
   );
 }
