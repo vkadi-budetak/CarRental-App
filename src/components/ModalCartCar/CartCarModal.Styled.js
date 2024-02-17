@@ -43,9 +43,31 @@ export const ContentStyled = styled.div`
 `;
 
 export const ConteinerModalStyled = styled.div`
-  margin: 40px;
   color: rgb(18, 20, 23);
 `;
+
+export const CloseBtnStyled = styled.button`
+  position: absolute;
+  top: 16px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+`;
+
+export const CloseBtnIconStyled = styled.span`
+font-size: 24px;
+
+&:hover,
+  :focus {
+    background-color: rgb(11, 68, 205);
+  }
+
+`;
+
 
 export const ImgModalStyled = styled.div`
   max-width: 461px;
@@ -91,8 +113,8 @@ export const SubtitleModalStyled = styled.p`
   /* color: rgb(18, 20, 23); */
 `;
 export const RentalConditionsStyled = styled.div`
-   display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -108,10 +130,26 @@ export const RentalConditionConteinerStyled = styled.div`
   text-align: center;
   border: 1px solid rgb(249, 249, 249);
   border-radius: 35px;
-  
 `;
 
 export const RentalConditionsTitleStyled = styled.span`
   font-weight: 600;
   color: rgb(52, 112, 255);
+`;
+
+export const BtnModalStyled = styled.button`
+  width: 168px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 24px;
+  background-color: rgb(52, 112, 255);
+  color: rgb(255, 255, 255);
+
+  &:hover,
+  :focus {
+    background-color: rgb(11, 68, 205);
+  }
 `;

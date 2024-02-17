@@ -24,11 +24,18 @@ export const SearchFormBtnStyled = styled.button`
   width: 136px;
   height: 57px;
   border-radius: 12px;
+
+  &:hover,
+  :focus {
+    background-color: rgb(11, 68, 205);
+  }
 `;
 
 export const SearchFormBtnLabelStyled = styled.span`
   width: auto;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
   color: rgb(255, 255, 255);
 `;
 

@@ -1,20 +1,25 @@
-
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { HeaderWrap } from './Header.Styled';
 
 const Header = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/catalog">Catalog</Link>
-        </li>
-        <li>
-          <Link to="/favorites">Favorite</Link>
-        </li>
-      </ul>
-    </nav>
+    <HeaderWrap>
+      {/* <img src="/CarRental-App/home_page.jpg" alt="fonCar" /> */}
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/catalog">Catalog</NavLink>
+          </li>
+          <li>
+            <NavLink to="/favorites">Favorites</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </HeaderWrap>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   CarItemStyled,
@@ -10,32 +10,38 @@ import {
   DescStyled,
   CarItemBtnStyled,
 } from './CarItem.Styled';
+import ModalCartCar from 'components/ModalCartCar/CartCarModal';
 
-export default function CarItem() {
+export default function CarItem({img, make, model, year, rentalPrice, address, rentalCompany, type, id, accessories}) {
+const [isModalOpen , setModalOpen] = useState(false);
+
+const openModal = () => {
+  setModalOpen(true);
+}
+
   return (
     <CarItemStyled>
-      <ImgCarStyled src="" alt="photoCar" />
-
+      {img && (<ImgCarStyled src={img} alt="photoCar" />)}
+      
       <TitleStyled>
-        Volvo <TitleBrandkStyled>XC90</TitleBrandkStyled>, 2019
-        <TitlePriceStyled>$50</TitlePriceStyled>
+        {make} <TitleBrandkStyled>{model}</TitleBrandkStyled>, {year}
+        <TitlePriceStyled>{rentalPrice}</TitlePriceStyled>
       </TitleStyled>
       <TitleDetailStyled>
-        <DescStyled>Kiev</DescStyled>
-        <DescStyled>Ukraine</DescStyled>
-        <DescStyled>Auto Rentals</DescStyled>
-        <DescStyled>Premium</DescStyled>
+        <DescStyled>{address}</DescStyled>
+        <DescStyled>{rentalCompany}</DescStyled>
       </TitleDetailStyled>
       <TitleDetailStyled>
-        <DescStyled>Suv</DescStyled>
-        <DescStyled>Volvo</DescStyled>
-        <DescStyled>9584</DescStyled>
-        <DescStyled>Premium Sound System</DescStyled>
+        <DescStyled>{type}</DescStyled>
+        <DescStyled>{make}</DescStyled>
+        <DescStyled>{id}</DescStyled>
+        <DescStyled>{accessories}</DescStyled>
       </TitleDetailStyled>
 
       <svg width="18" height="18"></svg>
 
-      <CarItemBtnStyled>Learn more</CarItemBtnStyled>
+      <CarItemBtnStyled onClick={openModal}>Learn more</CarItemBtnStyled>
+      {isModalOpen && <ModalCartCar/>}
     </CarItemStyled>
   );
 }

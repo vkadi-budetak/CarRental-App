@@ -8,7 +8,9 @@ max-height: 426px;
 
 export const ImgCarStyled = styled.img`
 max-height: 268px;
+max-width: 100%;
 border-radius: 14px;
+
 `
 
 export const TitleStyled = styled.h3`
@@ -41,6 +43,13 @@ export const CarItemBtnStyled = styled.button`
   height: 44px;
   border-radius: 12px;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
   background-color: rgb(52, 112, 255);
   color: rgb(255, 255, 255);
+
+  &:hover,
+  :focus {
+    background-color: rgb(11, 68, 205);
+  }
 `;

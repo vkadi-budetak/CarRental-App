@@ -1,24 +1,47 @@
-import SearchCar from './SearchCar/SearchCar';
-import CarList from './CarList/CarList';
-import ModalCartCar from './ModalCartCar/CartCarModal';
-
+import React, { Suspense, lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { Container } from './App.styled';
-import { useState } from 'react';
+import Header from './Header/Header';
+import Loader from './Loader/Loader';
 
-export const App = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
+const HomePage = lazy(() => import('../page/HomePage'));
+const CatalogPage = lazy(() => import('../page/CatalogPage'));
+const FavoritesPage = lazy(() => import('../page/FavoritesPage'));
 
-  const openModal = () => {
-    setModalOpen(true);
-  }
+const appRoutes = [
+  {
+    path: '/',
+    element: (
+        <HomePage />
+    ),
+  },
+  {
+    path: 'catalog',
+    element: (
+        <CatalogPage />
+    ),
+  },
+  {
+    path: 'favorites',
+    element: (
+        <FavoritesPage />
+    ),
+  },
+];
 
+const App = () => {
   return (
     <Container>
-      <SearchCar/>
-      <CarList />
-      <button onClick={openModal}>Відкрити модалку</button>
-      {isModalOpen && <ModalCartCar/>}
-      
+      <Header />
+      <Suspense fallback={<Loader />}>
+          <Routes>
+            {appRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+          </Routes>
+        </Suspense>
     </Container>
   );
 };
+
+export default App;
