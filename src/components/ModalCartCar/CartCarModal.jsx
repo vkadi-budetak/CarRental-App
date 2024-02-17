@@ -1,12 +1,12 @@
 import {
-  DescStyled,
-  TitleDetailStyled,
-} from 'components/CarItem/CarItem.Styled';
-import {
   CartCarModalStyled,
   ConteinerModalStyled,
   ContentStyled,
   ImgModalStyled,
+  RentalConditionConteinerStyled,
+  RentalConditionsStyled,
+  RentalConditionsTitleStyled,
+  SubtitleModalStyled,
   TextModalStyled,
   TitleDetailModalStyled,
   TitleModalBrandkStyled,
@@ -51,28 +51,30 @@ const ModalCartCar = () => {
             The Buick Enclave is a stylish and spacious SUV known for its
             comfortable ride and luxurious features.
           </TextModalStyled>
-          <div>
-            <p>Accessories and functionalities:</p>
+          <SubtitleModalStyled>Accessories and functionalities:</SubtitleModalStyled>
+          <TitleDetailModalStyled>
             <span>Leather seats</span>
             <span>Panoramic sunroof</span>
             <span>Power liftgate</span>
             <span>Premium audio system</span>
             <span>Remote start</span>
             <span>Blind-spot monitoring</span>
-          </div>
+          </TitleDetailModalStyled>
           <div>
-            <p>Rental Conditions: </p>
-            <span>
-              Minimum age : <span>25</span>
-            </span>
-            <span>Valid driver’s license</span>
-            <span>Security deposite required </span>
-            <span>
-              Mileage: <span>5,858</span>
-            </span>
-            <span>
-              Price: <span>40$</span>
-            </span>
+            <SubtitleModalStyled>Rental Conditions: </SubtitleModalStyled>
+            <RentalConditionsStyled>
+              <RentalConditionConteinerStyled>
+                Minimum age : <RentalConditionsTitleStyled>25</RentalConditionsTitleStyled>
+              </RentalConditionConteinerStyled>
+              <RentalConditionConteinerStyled>Valid driver’s license</RentalConditionConteinerStyled>
+              <RentalConditionConteinerStyled>Security deposite required </RentalConditionConteinerStyled>
+              <RentalConditionConteinerStyled>
+                Mileage: <RentalConditionsTitleStyled>5,858</RentalConditionsTitleStyled>
+              </RentalConditionConteinerStyled>
+              <RentalConditionConteinerStyled>
+                Price: <RentalConditionsTitleStyled>40$</RentalConditionsTitleStyled>
+              </RentalConditionConteinerStyled>
+            </RentalConditionsStyled>
           </div>
         </ConteinerModalStyled>
       </ContentStyled>
