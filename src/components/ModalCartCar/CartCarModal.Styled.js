@@ -18,11 +18,11 @@ export const CartCarModalStyled = styled.div`
 export const ContentStyled = styled.div`
   position: relative;
   height: auto;
-  width: 541px;
-  max-height: 752px;
+  max-width: 541px;
+  max-height: 90vh;
   overflow-y: auto;
   background-color: #ffffff;
-  padding: 32px 24px;
+  padding: 45px 24px 24px 24px;
   border-radius: 10px;
   font-size: 18px;
   line-height: 1.1;
@@ -59,21 +59,22 @@ export const CloseBtnStyled = styled.button`
 `;
 
 export const CloseBtnIconStyled = styled.span`
-font-size: 24px;
+  font-size: 24px;
 
-&:hover,
+  &:hover,
   :focus {
     background-color: rgb(11, 68, 205);
   }
-
 `;
 
-
 export const ImgModalStyled = styled.div`
-  max-width: 461px;
-  max-height: 248px;
-  border-radius: 14px;
   margin-bottom: 14px;
+
+  img {
+    border-radius: 14px;
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const TitleModalStyled = styled.h3`
@@ -137,7 +138,10 @@ export const RentalConditionsTitleStyled = styled.span`
   color: rgb(52, 112, 255);
 `;
 
-export const BtnModalStyled = styled.button`
+export const BtnModalStyled = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 168px;
   height: 44px;
   border-radius: 12px;
@@ -147,9 +151,12 @@ export const BtnModalStyled = styled.button`
   margin-top: 24px;
   background-color: rgb(52, 112, 255);
   color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
 
   &:hover,
-  :focus {
+  &:focus {
     background-color: rgb(11, 68, 205);
+    text-decoration: none;
   }
 `;

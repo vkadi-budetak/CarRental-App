@@ -9,7 +9,7 @@ export const selectAdverts = createSelector(
 
 export const selectAdvertsIsLoading = createSelector(
   selectAdvertsStore,
-  advertsStore => selectAdverts.isLoading
+  advertsStore => advertsStore.isLoading
 );
 
 export const selectAdvertsError = createSelector(
@@ -17,7 +17,12 @@ export const selectAdvertsError = createSelector(
   advertsStore => advertsStore.error
 );
 
-export const selectAdvertsFilter = createSelector(
+export const selectAdvertsPage = createSelector(
   selectAdvertsStore,
-  advertsStore => advertsStore.filter
+  advertsStore => advertsStore.page
+);
+
+export const selectAdvertsBrand = createSelector(
+  selectAdvertsStore,
+  advertsStore => advertsStore.filterBrand
 );

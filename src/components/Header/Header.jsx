@@ -5,7 +5,9 @@ import { HeaderWrap } from './Header.Styled';
 const Header = () => {
   return (
     <HeaderWrap>
-      {/* <img src="/CarRental-App/home_page.jpg" alt="fonCar" /> */}
+      <div>
+      <NavLink to="/"><img src="/CarRental-App/HomePage2.png" alt="CarLogo" /></NavLink>
+      </div>
       <nav>
         <ul>
           <li>

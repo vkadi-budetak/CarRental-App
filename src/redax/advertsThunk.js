@@ -1,15 +1,13 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {
-  requestAdverts,
-} from 'services/api';
+import { requestAdverts } from 'services/api';
 
 export const fetchAdverts = createAsyncThunk(
   'adverts/getAll',
-  async (_, thunkAPI) => {
+  async (params, thunkAPI) => {
     try {
-      const adverts = await requestAdverts();
+      const adverts = await requestAdverts(params);
 
-      return adverts; 
+      return adverts;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.massage);
     }

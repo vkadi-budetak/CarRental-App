@@ -6,11 +6,15 @@ const advertsInstance = axios.create({
 
 //--------------------Adverts---------------------
 
-export const requestAdverts = async () => {
-  const params = new URLSearchParams();
-  params.append('limit', 12);
-  params.append('page', 1);
+export const requestAdverts = async (params) => {
+  for (const key in params) {
+    if (!params[key]) {
+      delete params[key];
+    }
+  }
 
-  const { data } = await advertsInstance.get('/adverts', {params});
+  const searchParams = new URLSearchParams(params);
+
+  const { data } = await advertsInstance.get('/adverts', {params: searchParams});
   return data;
 };

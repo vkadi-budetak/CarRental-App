@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const SearchbarStyled = styled.div`
-margin-left: 162px;
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
+  padding: 50px 0;
+  justify-content: center;
 `;
 
 export const SearchbarDescStyled = styled.p`

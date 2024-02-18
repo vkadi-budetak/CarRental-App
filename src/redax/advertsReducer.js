@@ -1,11 +1,12 @@
-import { createSlice, isAnyOf } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { fetchAdverts } from './advertsThunk';
 
 const INITIAL_STATE = {
   adverts: [],
+  page: 1,
   isLoading: false,
   error: null,
-  filter: '',
+  filterBrand: null,
 };
 
 const advertsSlice = createSlice({
@@ -13,35 +14,37 @@ const advertsSlice = createSlice({
   initialState: INITIAL_STATE,
 
   reducers: {
-    setFilter: (state, action) => {
-      state.filter = action.payload;
+    incPage(state) {
+      state.page = state.page + 1;
+    },
+    resetAdverts(state) {
+      state.page = 1;
+      state.adverts = [];
+    },
+    setFilterBrand: (state, action) => {
+      state.filterBrand = action.payload;
+      state.page = 1;
     },
   },
   extraReducers: builder =>
     builder
       .addCase(fetchAdverts.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.adverts = action.payload;
+        if (state.page === 1) {
+          state.adverts = action.payload;
+        } else {
+          state.adverts = [...state.adverts, ...action.payload];
+        }
       })
-      .addMatcher(
-        isAnyOf(
-          fetchAdverts.pending,
-        ),
-        state => {
-          state.isLoading = true;
-          state.error = null;
-        }
-      )
-      .addMatcher(
-        isAnyOf(
-          fetchAdverts.rejected,
-        ),
-        (state, action) => {
-          state.isLoading = false;
-          state.error = action.payload;
-        }
-      ),
+      .addCase(fetchAdverts.pending, state => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(fetchAdverts.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      }),
 });
 
-export const { setFilter } = advertsSlice.actions;
+export const { incPage, resetAdverts, setFilterBrand } = advertsSlice.actions;
 export const advertsReducer = advertsSlice.reducer;

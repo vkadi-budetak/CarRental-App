@@ -1,25 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import CarItem from 'components/CarItem/CarItem';
+import { incPage, resetAdverts } from 'redax/advertsReducer';
 
-
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAdverts } from 'redax/advertsThunk';
 
 import {
   selectAdverts,
+  selectAdvertsPage,
+  selectAdvertsBrand,
   selectAdvertsError,
   selectAdvertsIsLoading,
 } from 'redax/adverts.selectors';
 
 import Loader from 'components/Loader/Loader';
 import ErrorMessage from 'components/ErrorMessage/ErrorMessage';
-import { GridItem, GridStyled } from './CarList.Styled';
+import { CarListBtnStyled, GridItem, GridStyled } from './CarList.Styled';
 
 export default function CarList() {
   const adverts = useSelector(selectAdverts);
+  const page = useSelector(selectAdvertsPage);
+  const make = useSelector(selectAdvertsBrand);
   const isLoading = useSelector(selectAdvertsIsLoading);
   const error = useSelector(selectAdvertsError);
+  const dispatch = useDispatch();
+  const limit = 12;
 
-  console.log(adverts)
+  useEffect(() => {
+    dispatch(fetchAdverts({ limit, page, make }));
+  }, [dispatch, page, make]);
+
+  useEffect(() => {
+    return () => {
+      dispatch(resetAdverts());
+    };
+  }, [dispatch]);
+
+  const handleLoadMore = () => {
+    dispatch(incPage());
+  };
 
   return (
     <GridStyled>
@@ -27,9 +46,15 @@ export default function CarList() {
       {error && <ErrorMessage message={error} />}
 
       {adverts.map(el => (
-        <GridItem><CarItem key={el.id} {...el} /></GridItem>
-        
+        <GridItem key={el.id}>
+          <CarItem data={el} />
+        </GridItem>
       ))}
+      {adverts.length < 25 ? (
+        <CarListBtnStyled onClick={handleLoadMore}>Load more</CarListBtnStyled>
+      ) : (
+        false
+      )}
     </GridStyled>
   );
 }

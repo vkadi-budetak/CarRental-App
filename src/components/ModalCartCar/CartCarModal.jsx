@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useEffect } from 'react';
 
 import {
   BtnModalStyled,
@@ -18,74 +18,102 @@ import {
   TitleModalStyled,
 } from './CartCarModal.Styled';
 
-const ModalCartCar = () => {
-  const [isModalOpen, setModalOpen] = useState(true)
+const ModalCartCar = ({ data, closeModal }) => {
+  const {
+    make,
+    model,
+    year,
+    img,
+    address,
+    id,
+    type,
+    fuelConsumption,
+    engineSize,
+    accessories,
+    functionalities,
+    rentalConditions,
+    mileage,
+    rentalPrice,
+  } = data;
 
-  const closeModal = () => {
-    setModalOpen(false)
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
+  function handleKeyDown(event) {
+    if (event.code === 'Escape') {
+      closeModal();
+    }
   }
 
+  const handleOverlayClick = event => {
+    if (event.currentTarget === event.target) {
+      closeModal();
+    }
+  };
+
   return (
-    <CartCarModalStyled>
-      { isModalOpen && ( 
-        <ContentStyled>
+    <CartCarModalStyled onClick={handleOverlayClick}>
+      <ContentStyled>
         <ConteinerModalStyled>
-        <div>
-          <CloseBtnStyled onClick={closeModal}>
-          <CloseBtnIconStyled>
-            &times;
-          </CloseBtnIconStyled>
-          </CloseBtnStyled>
+          <div>
+            <CloseBtnStyled onClick={closeModal}>
+              <CloseBtnIconStyled>&times;</CloseBtnIconStyled>
+            </CloseBtnStyled>
+          </div>
 
-        </div>
-
-        <ImgModalStyled>
-          <img src="../../../public/ferrari.png" alt="photoCar" />
-        </ImgModalStyled>
-        <TitleModalStyled>
-          Buick <TitleModalBrandkStyled>Enclave</TitleModalBrandkStyled>, 2008
-        </TitleModalStyled>
-        <TitleDetailModalStyled>
-          <span>Kiev</span>
-          <span>Ukraine</span>
-          <span>Id: 9582</span>
-          <span>Year: 2008</span>
-          <span>Type: Suv</span>
-          <span>Fuel Consumption: 10.5</span>
-          <span>Engine Size: 3.6L V6</span>
-        </TitleDetailModalStyled>
-        <TextModalStyled>
-          The Buick Enclave is a stylish and spacious SUV known for its
-          comfortable ride and luxurious features.
-        </TextModalStyled>
-        <SubtitleModalStyled>Accessories and functionalities:</SubtitleModalStyled>
-        <TitleDetailModalStyled>
-          <span>Leather seats</span>
-          <span>Panoramic sunroof</span>
-          <span>Power liftgate</span>
-          <span>Premium audio system</span>
-          <span>Remote start</span>
-          <span>Blind-spot monitoring</span>
-        </TitleDetailModalStyled>
+          <ImgModalStyled>
+            <img src={img} alt="photoCar" />
+          </ImgModalStyled>
+          <TitleModalStyled>
+            {make} <TitleModalBrandkStyled>{model}</TitleModalBrandkStyled>,
+            {year}
+          </TitleModalStyled>
+          <TitleDetailModalStyled>
+            <span>{address}</span>
+            <span>Id: {id}</span>
+            <span>Year: {year}</span>
+            <span>Type: {type}</span>
+            <span>Fuel Consumption: {fuelConsumption}</span>
+            <span>Engine Size: {engineSize}</span>
+          </TitleDetailModalStyled>
+          <TextModalStyled>
+            The Buick Enclave is a stylish and spacious SUV known for its
+            comfortable ride and luxurious features.
+          </TextModalStyled>
+          <SubtitleModalStyled>
+            Accessories and functionalities:
+          </SubtitleModalStyled>
+          <TitleDetailModalStyled>
+            <span>{accessories}</span>
+            <span>{functionalities}</span>
+          </TitleDetailModalStyled>
           <SubtitleModalStyled>Rental Conditions: </SubtitleModalStyled>
           <RentalConditionsStyled>
             <RentalConditionConteinerStyled>
-              Minimum age : <RentalConditionsTitleStyled>25</RentalConditionsTitleStyled>
-            </RentalConditionConteinerStyled>
-            <RentalConditionConteinerStyled>Valid driver’s license</RentalConditionConteinerStyled>
-            <RentalConditionConteinerStyled>Security deposite required </RentalConditionConteinerStyled>
-            <RentalConditionConteinerStyled>
-              Mileage: <RentalConditionsTitleStyled>5,858</RentalConditionsTitleStyled>
+              <RentalConditionsTitleStyled>
+                {rentalConditions}
+              </RentalConditionsTitleStyled>
             </RentalConditionConteinerStyled>
             <RentalConditionConteinerStyled>
-              Price: <RentalConditionsTitleStyled>40$</RentalConditionsTitleStyled>
+              Mileage:
+              <RentalConditionsTitleStyled>
+                {mileage}
+              </RentalConditionsTitleStyled>
+            </RentalConditionConteinerStyled>
+            <RentalConditionConteinerStyled>
+              Price:
+              <RentalConditionsTitleStyled>
+                {rentalPrice}
+              </RentalConditionsTitleStyled>
             </RentalConditionConteinerStyled>
           </RentalConditionsStyled>
-        <BtnModalStyled>Rental car</BtnModalStyled>
-      </ConteinerModalStyled>
-    </ContentStyled>
-      )}
-      
+          <BtnModalStyled href='tel:+380730000000'>Rental car</BtnModalStyled>
+        </ConteinerModalStyled>
+      </ContentStyled>
     </CartCarModalStyled>
   );
 };
@@ -93,38 +121,3 @@ const ModalCartCar = () => {
 export default ModalCartCar;
 
 
-
-
-
-//---------------------
-//   componentDidMount() {
-//     window.addEventListener('keydown', this.onKeyDown);
-//   }
-
-//   componentWillUnmount() {
-//     window.removeEventListener('keydown', this.onKeyDown);
-//   }
-
-//   onKeyDown = event => {
-//     if (event.code === 'Escape') {
-//       this.props.onCloseModal();
-//     }
-//   };
-
-//   onOverlayClick = event => {
-//     if (event.currentTarget === event.target) {
-//       this.props.onCloseModal();
-//     }
-//   };
-
-//   render() {
-//     return (
-//       <div onClick={this.onOverlayClick} className="Overlay">
-//         <div className="Modal">
-//           <img src={this.props.data.src} alt={this.props.data.alt} />
-//         </div>
-//       </div>
-//     );
-//   }
-// }
-//--------------
