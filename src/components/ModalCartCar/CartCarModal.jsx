@@ -41,7 +41,7 @@ const ModalCartCar = ({ data, closeModal }) => {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, []);
+  }, [handleKeyDown]);
 
   function handleKeyDown(event) {
     if (event.code === 'Escape') {
