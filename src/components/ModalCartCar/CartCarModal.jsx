@@ -31,23 +31,27 @@ const ModalCartCar = ({ data, closeModal }) => {
     engineSize,
     accessories,
     functionalities,
-    rentalConditions,
+    rentalConditions, 
     mileage,
     rentalPrice,
   } = data;
 
+  
+
   useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.code === 'Escape') {
+        closeModal();
+      }
+    }
     window.addEventListener('keydown', handleKeyDown);
+
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [handleKeyDown]);
+  }, [closeModal]);
 
-  function handleKeyDown(event) {
-    if (event.code === 'Escape') {
-      closeModal();
-    }
-  }
+  
 
   const handleOverlayClick = event => {
     if (event.currentTarget === event.target) {
