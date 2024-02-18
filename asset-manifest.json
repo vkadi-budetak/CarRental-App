@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/CarRental-App/static/css/main.7acaea2f.css",
-    "main.js": "/CarRental-App/static/js/main.b996ef40.js",
-    "static/js/128.61a02d59.chunk.js": "/CarRental-App/static/js/128.61a02d59.chunk.js",
-    "static/js/846.f824aee0.chunk.js": "/CarRental-App/static/js/846.f824aee0.chunk.js",
-    "static/js/981.9cbfc881.chunk.js": "/CarRental-App/static/js/981.9cbfc881.chunk.js",
+    "main.css": "/CarRental-App/static/css/main.544339c2.css",
+    "main.js": "/CarRental-App/static/js/main.10b8c08a.js",
+    "static/js/128.1a12cfad.chunk.js": "/CarRental-App/static/js/128.1a12cfad.chunk.js",
+    "static/js/697.0f927e98.chunk.js": "/CarRental-App/static/js/697.0f927e98.chunk.js",
+    "static/js/981.b09eed64.chunk.js": "/CarRental-App/static/js/981.b09eed64.chunk.js",
     "static/js/941.a234efa5.chunk.js": "/CarRental-App/static/js/941.a234efa5.chunk.js",
     "index.html": "/CarRental-App/index.html",
-    "main.7acaea2f.css.map": "/CarRental-App/static/css/main.7acaea2f.css.map",
-    "main.b996ef40.js.map": "/CarRental-App/static/js/main.b996ef40.js.map",
-    "128.61a02d59.chunk.js.map": "/CarRental-App/static/js/128.61a02d59.chunk.js.map",
-    "846.f824aee0.chunk.js.map": "/CarRental-App/static/js/846.f824aee0.chunk.js.map",
-    "981.9cbfc881.chunk.js.map": "/CarRental-App/static/js/981.9cbfc881.chunk.js.map",
+    "main.544339c2.css.map": "/CarRental-App/static/css/main.544339c2.css.map",
+    "main.10b8c08a.js.map": "/CarRental-App/static/js/main.10b8c08a.js.map",
+    "128.1a12cfad.chunk.js.map": "/CarRental-App/static/js/128.1a12cfad.chunk.js.map",
+    "697.0f927e98.chunk.js.map": "/CarRental-App/static/js/697.0f927e98.chunk.js.map",
+    "981.b09eed64.chunk.js.map": "/CarRental-App/static/js/981.b09eed64.chunk.js.map",
     "941.a234efa5.chunk.js.map": "/CarRental-App/static/js/941.a234efa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.b996ef40.js"
+    "static/css/main.544339c2.css",
+    "static/js/main.10b8c08a.js"
   ]
 }
