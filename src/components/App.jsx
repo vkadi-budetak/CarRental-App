@@ -4,9 +4,9 @@ import { Container } from './App.styled';
 import Header from './Header/Header';
 import Loader from './Loader/Loader';
 
-const HomePage = lazy(() => import('../page/HomePage'));
-const CatalogPage = lazy(() => import('../page/CatalogPage'));
-const FavoritesPage = lazy(() => import('../page/FavoritesPage'));
+const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
+const CatalogPage = lazy(() => import('../pages/CatalogPage/CatalogPage'));
+const FavoritesPage = lazy(() => import('../pages/FavoritesPage/FavoritesPage'));
 
 const appRoutes = [
   {

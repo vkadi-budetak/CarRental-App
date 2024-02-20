@@ -7,13 +7,12 @@ export const HeaderWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: rgb(52, 112, 255);
-  border-radius: 15px;
-  padding: 15px 30px;
+  /* border-radius: 15px; */
+  padding: 15px 100px;
 
   img {
-    /* max-width: 50%; */
-
-    width: 100px;
+    width: 60px;
+   
   }
 
   ul {
@@ -33,7 +32,7 @@ export const HeaderWrap = styled.div`
         padding-bottom: 2px;
 
         &.active {
-            border-color: white;
+          border-color: white;
         }
       }
     }
@@ -44,4 +43,3 @@ export const HeaderWrap = styled.div`
     flex-wrap: nowrap;
   }
 `;
-

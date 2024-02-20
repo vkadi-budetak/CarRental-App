@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <HeaderWrap>
       <div>
-      <NavLink to="/"><img src="/CarRental-App/HomePage2.png" alt="CarLogo" /></NavLink>
+      <NavLink to="/"><img src="/CarRental-App/263057.png" alt="CarLogo" /></NavLink>
       </div>
       <nav>
         <ul>
