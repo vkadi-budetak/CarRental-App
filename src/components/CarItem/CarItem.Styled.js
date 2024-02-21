@@ -9,7 +9,7 @@ export const CarItemStyled = styled.div`
 `;
 
 export const ImgCarStyled = styled.img`
-  height: 268px;
+  height: 274px;
   max-width: 100%;
   border-radius: 14px;
   object-fit: cover;
@@ -18,6 +18,8 @@ export const ImgCarStyled = styled.img`
 export const TitleStyled = styled.h3`
   margin-top: 14px;
   font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 `;
 
 export const TitleBrandkStyled = styled.span`
@@ -25,21 +27,36 @@ export const TitleBrandkStyled = styled.span`
 `;
 
 export const TitlePriceStyled = styled.span`
-  margin-left: 87px;
+  margin-left: 10px;
 `;
 
 export const TitleDetailStyled = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 8px;
   color: rgba(18, 20, 23, 0.5);
   font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+
+  & :last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  & :first-child {
+    padding-left: 0;
+  }
 `;
-export const DescStyled = styled.span``;
+
+export const DescStyled = styled.span`
+  padding: 0 6px;
+  border-right: 1px solid rgba(18, 20, 23, 0.1);
+  white-space: nowrap;
+
+  &:last-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+`;
 
 export const CarItemBtnStyled = styled.button`
-  margin-top: auto;
   width: 100%;
   height: 44px;
   border-radius: 12px;
@@ -48,15 +65,16 @@ export const CarItemBtnStyled = styled.button`
   line-height: 20px;
   background-color: rgb(52, 112, 255);
   color: rgb(255, 255, 255);
+  margin-top: 28px;
 
   &:hover,
-  :focus {
+  &:focus {
     background-color: rgb(11, 68, 205);
   }
 `;
 
 export const LikeStyled = styled.div`
-position: absolute;
-top: 15px;
-right: 15px;
-`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+`;

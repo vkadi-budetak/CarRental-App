@@ -4,6 +4,7 @@ export const GridStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-inline: -15px;
+  margin-top: 50px;
 `;
 export const GridItem = styled.div`
   width: 25%;
@@ -30,6 +31,7 @@ export const CarListBtnStyled = styled.button`
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  cursor: pointer;
 
   color: rgb(52, 112, 255);
 

@@ -4,12 +4,13 @@ export const SearchbarStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  padding: 50px 0;
   justify-content: center;
 `;
 
 export const SearchbarDescStyled = styled.p`
 font-size: 14px;
+font-weight: 500;
+line-height: 18px;
 color: rgb(138, 138, 137);
 `
 

@@ -72,14 +72,15 @@ export default function CarItem({ data }) {
         <TitlePriceStyled>{rentalPrice}</TitlePriceStyled>
       </TitleStyled>
       <TitleDetailStyled>
-        <DescStyled>{address}</DescStyled>
+        <DescStyled>{address[1]}</DescStyled>
+        <DescStyled>{address[2]}</DescStyled>
         <DescStyled>{rentalCompany}</DescStyled>
       </TitleDetailStyled>
       <TitleDetailStyled>
         <DescStyled>{type}</DescStyled>
-        <DescStyled>{make}</DescStyled>
+        <DescStyled>{model}</DescStyled>
         <DescStyled>{id}</DescStyled>
-        <DescStyled>{accessories}</DescStyled>
+        <DescStyled>{accessories[0]}</DescStyled>
       </TitleDetailStyled>
       <CarItemBtnStyled onClick={openModal}>Learn more</CarItemBtnStyled>
       {isModalOpen && <ModalCartCar data={data} closeModal={closeModal} />}

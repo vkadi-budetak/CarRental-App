@@ -5,7 +5,6 @@ import {
   HomePageTextStyled,
 } from './HomePage.styled';
 
-// import CatalogPage from 'pages/CatalogPage/CatalogPage';
 import { NavLink } from 'react-router-dom';
 
 const HomePage = () => {
