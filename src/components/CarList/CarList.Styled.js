@@ -6,11 +6,12 @@ export const GridStyled = styled.div`
   margin-inline: -15px;
   margin-top: 50px;
 `;
+
 export const GridItem = styled.div`
   width: 25%;
   padding: 0 15px;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 1440px) {
     width: calc(100%/3);
     }
 

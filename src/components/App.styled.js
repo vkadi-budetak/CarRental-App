@@ -19,5 +19,6 @@ margin: 0 auto;  */
   @media screen and (min-width: 1440px) {
 
   }
+
 `
 

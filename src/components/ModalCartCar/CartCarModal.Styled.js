@@ -30,16 +30,16 @@ export const ContentStyled = styled.div`
   /* @media (min-width: 1440px) {
       width: 592px;
       padding: 32px 24px;
-    }
-
-    @media (min-width: 768px) and (max-width: 1439px) {
-      width: 704px;
-      padding: 32px 24px;
-    }
-    @media (min-width: 320px) and (max-width: 767px) {
-      width: 280px;
-      padding: 24px 12px;
     } */
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    width: 704px;
+    padding: 32px 24px;
+  }
+  @media (min-width: 320px) and (max-width: 767px) {
+    width: 280px;
+    padding: 24px 12px;
+  }
 `;
 
 export const ConteinerModalStyled = styled.div`
@@ -90,7 +90,7 @@ export const TitleModalBrandkStyled = styled.span`
 export const TitleDetailModalStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 4px;
   /* max-width: 277px;
 height: 40px; */
   color: rgba(18, 20, 23, 0.5);
@@ -98,6 +98,26 @@ height: 40px; */
   font-weight: 400;
   line-height: 18px;
   margin-top: 8px;
+
+  & :last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+`;
+
+export const TitleTextModalStyled = styled.span`
+  padding: 0 6px;
+  border-right: 1px solid rgba(18, 20, 23, 0.1);
+  white-space: nowrap;
+
+  &:last-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  & :first-child {
+    padding-left: 0;
+  }
 `;
 
 export const TextModalStyled = styled.p`
@@ -131,6 +151,7 @@ export const RentalConditionConteinerStyled = styled.div`
   text-align: center;
   border: 1px solid rgb(249, 249, 249);
   border-radius: 35px;
+  background-color: rgb(249, 249, 249);
 `;
 
 export const RentalConditionsTitleStyled = styled.span`

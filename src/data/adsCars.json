@@ -24,8 +24,8 @@
     "address": ["123 Example Street", "Kiev", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit required"
+      "Valid driver's license",
+      "Security deposit required"
     ],
     "mileage": 5858
   },
@@ -54,8 +54,8 @@
     "address": ["456 Example Avenue", "Lviv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nProof of insurance required"
+      "Valid driver's license",
+      "Proof of insurance required"
     ],
     "mileage": 5352
   },
@@ -84,8 +84,8 @@
     "address": ["789 Example Boulevard", "Odessa", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 23",
-      "nValid driver's license",
-      "nCredit card required"
+      "Valid driver's license",
+      "Credit card required"
     ],
     "mileage": 5966
   },
@@ -114,8 +114,8 @@
     "address": ["321 Example Road", "Kharkiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit required"
+      "Valid driver's license",
+      "Security deposit required"
     ],
     "mileage": 4771
   },
@@ -144,8 +144,8 @@
     "address": ["987 Example Street", "Kyiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nCredit card required"
+      "Valid driver's license",
+      "Credit card required"
     ],
     "mileage": 4061
   },
@@ -174,8 +174,8 @@
     "address": ["654 Example Avenue", "Lviv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nProof of insurance required"
+      "Valid driver's license",
+      "Proof of insurance required"
     ],
     "mileage": 5374
   },
@@ -204,8 +204,8 @@
     "address": ["321 Example Road", "Odessa", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit required"
+      "Valid driver's license",
+      "Security deposit required"
     ],
     "mileage": 6282
   },
@@ -234,8 +234,8 @@
     "address": ["123 Example Boulevard", "Kharkiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nInsurance coverage required"
+      "Valid driver's license",
+      "Insurance coverage required"
     ],
     "mileage": 6173
   },
@@ -264,8 +264,8 @@
     "address": ["789 Example Square", "Dnipro", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit required"
+      "Valid driver's license",
+      "Security deposit required"
     ],
     "mileage": 4989
   },
@@ -294,8 +294,8 @@
     "address": ["456 Example Lane", "Zaporizhzhia", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nCredit card required"
+      "Valid driver's license",
+      "Credit card required"
     ],
     "mileage": 4591
   },
@@ -324,8 +324,8 @@
     "address": ["234 Example Place", "Vinnytsia", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nProof of insurance required"
+      "Valid driver's license",
+      "Proof of insurance required"
     ],
     "mileage": 6275
   },
@@ -354,8 +354,8 @@
     "address": ["567 Example Street", "Lviv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 30",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 4317
   },
@@ -384,8 +384,8 @@
     "address": ["789 Example Boulevard", "Kyiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and proof of insurance required"
+      "Valid driver's license",
+      "Security deposit and proof of insurance required"
     ],
     "mileage": 5722
   },
@@ -414,8 +414,8 @@
     "address": ["123 Example Avenue", "Odessa", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 30",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 6464
   },
@@ -444,8 +444,8 @@
     "address": ["456 Example Street", "Lviv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit required"
+      "Valid driver's license",
+      "Security deposit required"
     ],
     "mileage": 5091
   },
@@ -474,8 +474,8 @@
     "address": ["321 Example Road", "Kharkiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 30",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 5832
   },
@@ -504,8 +504,8 @@
     "address": ["987 Example Lane", "Dnipro", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 4635
   },
@@ -534,8 +534,8 @@
     "address": ["654 Example Circle", "Zaporizhzhia", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and proof of insurance required"
+      "Valid driver's license",
+      "Security deposit and proof of insurance required"
     ],
     "mileage": 5990
   },
@@ -564,8 +564,8 @@
     "address": ["123 Example Street", "Lviv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 6330
   },
@@ -594,8 +594,8 @@
     "address": ["456 Example Avenue, Kyiv, Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 6280
   },
@@ -624,8 +624,8 @@
     "address": ["789 Example Boulevard", "Odesa", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 5807
   },
@@ -654,8 +654,8 @@
     "address": ["321 Example Lane", "Kharkiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 4618
   },
@@ -684,8 +684,8 @@
     "address": ["987 Example Road", "Dnipro", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 6618
   },
@@ -714,8 +714,8 @@
     "address": ["654 Example Street", "Lviv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 25",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 4856
   },
@@ -744,8 +744,8 @@
     "address": ["321 Example Lane", "Kharkiv", "Ukraine"],
     "rentalConditions": [
       "Minimum age: 21",
-      "nValid driver's license",
-      "nSecurity deposit and insurance required"
+      "Valid driver's license",
+      "Security deposit and insurance required"
     ],
     "mileage": 6234
   }

@@ -16,6 +16,7 @@ import {
   TitleDetailModalStyled,
   TitleModalBrandkStyled,
   TitleModalStyled,
+  TitleTextModalStyled,
 } from './CartCarModal.Styled';
 
 const ModalCartCar = ({ data, closeModal }) => {
@@ -31,27 +32,23 @@ const ModalCartCar = ({ data, closeModal }) => {
     engineSize,
     accessories,
     functionalities,
-    rentalConditions, 
+    rentalConditions,
     mileage,
     rentalPrice,
   } = data;
 
-  
-
   useEffect(() => {
-    const handleKeyDown = (event) => {
+    const handleKeyDown = event => {
       if (event.code === 'Escape') {
         closeModal();
       }
-    }
+    };
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [closeModal]);
-
-  
 
   const handleOverlayClick = event => {
     if (event.currentTarget === event.target) {
@@ -64,7 +61,7 @@ const ModalCartCar = ({ data, closeModal }) => {
       <ContentStyled>
         <ConteinerModalStyled>
           <div>
-            <CloseBtnStyled onClick={closeModal}>
+            <CloseBtnStyled onClick={closeModal} widt>
               <CloseBtnIconStyled>&times;</CloseBtnIconStyled>
             </CloseBtnStyled>
           </div>
@@ -73,16 +70,21 @@ const ModalCartCar = ({ data, closeModal }) => {
             <img src={img} alt="photoCar" />
           </ImgModalStyled>
           <TitleModalStyled>
-            {make} <TitleModalBrandkStyled>{model}</TitleModalBrandkStyled>,
+            {make} <TitleModalBrandkStyled>{model}</TitleModalBrandkStyled>,{' '}
             {year}
           </TitleModalStyled>
           <TitleDetailModalStyled>
-            <span>{address}</span>
-            <span>Id: {id}</span>
-            <span>Year: {year}</span>
-            <span>Type: {type}</span>
-            <span>Fuel Consumption: {fuelConsumption}</span>
-            <span>Engine Size: {engineSize}</span>
+            <TitleTextModalStyled>{address[1]}</TitleTextModalStyled>
+            <TitleTextModalStyled>{address[2]}</TitleTextModalStyled>
+            <TitleTextModalStyled>Id: {id}</TitleTextModalStyled>
+            <TitleTextModalStyled>Year: {year}</TitleTextModalStyled>
+            <TitleTextModalStyled>Type: {type}</TitleTextModalStyled>
+            <TitleTextModalStyled>
+              Fuel Consumption: {fuelConsumption}
+            </TitleTextModalStyled>
+            <TitleTextModalStyled>
+              Engine Size: {engineSize}
+            </TitleTextModalStyled>
           </TitleDetailModalStyled>
           <TextModalStyled>
             The Buick Enclave is a stylish and spacious SUV known for its
@@ -92,15 +94,26 @@ const ModalCartCar = ({ data, closeModal }) => {
             Accessories and functionalities:
           </SubtitleModalStyled>
           <TitleDetailModalStyled>
-            <span>{accessories}</span>
-            <span>{functionalities}</span>
+            <TitleTextModalStyled>{accessories[0]}</TitleTextModalStyled>
+            <TitleTextModalStyled>{accessories[1]}</TitleTextModalStyled>
+            <TitleTextModalStyled>{functionalities[0]}</TitleTextModalStyled>
+            <TitleTextModalStyled>{accessories[2]}</TitleTextModalStyled>
+            <TitleTextModalStyled>{functionalities[1]}</TitleTextModalStyled>
+            <TitleTextModalStyled>{functionalities[2]}</TitleTextModalStyled>
           </TitleDetailModalStyled>
           <SubtitleModalStyled>Rental Conditions: </SubtitleModalStyled>
           <RentalConditionsStyled>
             <RentalConditionConteinerStyled>
+              Minimum age:
               <RentalConditionsTitleStyled>
-                {rentalConditions}
+                {rentalConditions[0].split(':')[1]}
               </RentalConditionsTitleStyled>
+            </RentalConditionConteinerStyled>
+            <RentalConditionConteinerStyled>
+              {rentalConditions[1]}
+            </RentalConditionConteinerStyled>
+            <RentalConditionConteinerStyled>
+              {rentalConditions[1]}
             </RentalConditionConteinerStyled>
             <RentalConditionConteinerStyled>
               Mileage:
@@ -115,7 +128,7 @@ const ModalCartCar = ({ data, closeModal }) => {
               </RentalConditionsTitleStyled>
             </RentalConditionConteinerStyled>
           </RentalConditionsStyled>
-          <BtnModalStyled href='tel:+380730000000'>Rental car</BtnModalStyled>
+          <BtnModalStyled href="tel:+380730000000">Rental car</BtnModalStyled>
         </ConteinerModalStyled>
       </ContentStyled>
     </CartCarModalStyled>
@@ -123,5 +136,3 @@ const ModalCartCar = ({ data, closeModal }) => {
 };
 
 export default ModalCartCar;
-
-

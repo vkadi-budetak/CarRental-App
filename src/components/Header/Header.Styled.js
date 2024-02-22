@@ -7,7 +7,6 @@ export const HeaderWrap = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: rgb(52, 112, 255);
-  /* border-radius: 15px; */
   padding: 5px 100px;
 
   img {

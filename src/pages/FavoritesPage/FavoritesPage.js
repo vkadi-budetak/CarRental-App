@@ -3,20 +3,35 @@ import { useSelector } from 'react-redux';
 import { selectFavorites } from 'redax/favorites.selectors';
 import { GridStyled, GridItem } from 'components/CarList/CarList.Styled';
 import CarItem from 'components/CarItem/CarItem';
+import {
+  FavoritesItemStyled,
+  FavoritesPageStyled,
+  FavoritesTextStyled,
+} from './FavoritesPage.styled';
+import { NavLink } from 'react-router-dom';
 
 const FavoritesPage = () => {
   const favorites = useSelector(selectFavorites);
 
   return (
-    <GridStyled>
-      {favorites.length
-        ? favorites.map(el => (
+    <FavoritesPageStyled>
+      <GridStyled>
+        {favorites.length ? (
+          favorites.map(el => (
             <GridItem key={el.id}>
               <CarItem data={el} />
             </GridItem>
           ))
-        : false}
-    </GridStyled>
+        ) : (
+          <FavoritesTextStyled>
+            No selected cars yet. Explore our
+            <NavLink className="link" to="/catalog">
+              <FavoritesItemStyled> catalog</FavoritesItemStyled>
+            </NavLink> now.
+          </FavoritesTextStyled>
+        )}
+      </GridStyled>
+    </FavoritesPageStyled>
   );
 };
 
