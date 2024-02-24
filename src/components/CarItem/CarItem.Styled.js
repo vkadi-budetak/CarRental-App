@@ -20,6 +20,11 @@ export const TitleStyled = styled.h3`
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+
+  white-space: nowrap;
+  width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const TitleBrandkStyled = styled.span`
@@ -27,7 +32,7 @@ export const TitleBrandkStyled = styled.span`
 `;
 
 export const TitlePriceStyled = styled.span`
-  margin-left: 10px;
+  /* margin-left: 10px; */
 `;
 
 export const TitleDetailStyled = styled.div`
@@ -36,11 +41,11 @@ export const TitleDetailStyled = styled.div`
   font-weight: 400;
   line-height: 18px;
 
-  & :last-child {
+  &:last-child {
     border-right: none;
     padding-right: 0;
   }
-  & :first-child {
+  &:first-child {
     padding-left: 0;
   }
 `;
@@ -51,6 +56,8 @@ export const DescStyled = styled.span`
   white-space: nowrap;
 
   &:last-child {
+    border-right: none;
+    padding-right: 0;
     text-overflow: ellipsis;
     overflow: hidden;
   }

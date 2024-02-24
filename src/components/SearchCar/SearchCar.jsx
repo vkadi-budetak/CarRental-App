@@ -72,7 +72,7 @@ export default function SearchCar() {
       </div>
 
       <SearchFormBtnStyled>
-        <SearchFormBtnLabelStyled>Search</SearchFormBtnLabelStyled>
+      <SearchFormBtnLabelStyled>Search</SearchFormBtnLabelStyled>   
       </SearchFormBtnStyled>
     </SearchbarStyled>
   );

@@ -5,6 +5,7 @@ export const GridStyled = styled.div`
   flex-wrap: wrap;
   margin-inline: -15px;
   margin-top: 50px;
+  justify-content: center;
 `;
 
 export const GridItem = styled.div`

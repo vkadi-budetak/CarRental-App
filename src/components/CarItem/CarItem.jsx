@@ -13,6 +13,7 @@ import {
   DescStyled,
   CarItemBtnStyled,
   LikeStyled,
+  CardStyled,
 } from './CarItem.Styled';
 import ModalCartCar from 'components/ModalCartCar/CartCarModal';
 
@@ -66,11 +67,12 @@ export default function CarItem({ data }) {
   return (
     <CarItemStyled>
       {img && <ImgCarStyled src={img} alt="photoCar" />}
+      
+        <TitleStyled>
+          {make} <TitleBrandkStyled>{model}</TitleBrandkStyled>, {year}
+          <TitlePriceStyled>{rentalPrice}</TitlePriceStyled>
+        </TitleStyled>
 
-      <TitleStyled>
-        {make} <TitleBrandkStyled>{model}</TitleBrandkStyled>, {year}
-        <TitlePriceStyled>{rentalPrice}</TitlePriceStyled>
-      </TitleStyled>
       <TitleDetailStyled>
         <DescStyled>{address[1]}</DescStyled>
         <DescStyled>{address[2]}</DescStyled>

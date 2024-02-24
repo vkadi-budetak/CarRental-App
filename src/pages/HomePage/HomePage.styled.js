@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const HomePageImgStyled = styled.img`
   width: 100%;
+  height: 100vh;
+  object-fit: cover;
 `;
 
 export const HomePageTextStyled = styled.div`
@@ -10,7 +12,7 @@ export const HomePageTextStyled = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   opacity: 0.5;
   z-index: 100;
   text-align: center;
