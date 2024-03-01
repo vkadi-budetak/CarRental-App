@@ -50,7 +50,7 @@ export default function CarList() {
           <CarItem data={el} />
         </GridItem>
       ))}
-      {adverts.length < 25 ? (
+      {adverts.length < 25 && !make ? (
         <CarListBtnStyled onClick={handleLoadMore}>Load more</CarListBtnStyled>
       ) : (
         false
